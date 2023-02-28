@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            input[type=button]
+            {
+                width:100%;
+            }
+            input[type=text]
+            {
+                align:right;
+            }
+        </style>
+        <script>
+            function show(v1)
+            {
+                document.getElementById("vIn").value+=v1
+            }
+
+            function solve()
+            {
+                var v2 = document.getElementById("vIn").value
+                var v3=eval(v2)
+                document.getElementById("vIn").value=v3
+            }
+
+            function clsr()
+            {
+                document.getElementById("vIn").value=""
+            }
+        </script>
+    </head>
+    <body bgcolor="yellow">
+        <caption>Javascript Calculator<caption>
+        <table border="0" align="center">
+            <tr>
+                <td colspan="4"><input type="text" id="vIn"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="show('7')"></td>
+                <td><input type="button" value="8" onclick="show('8')"></td>
+                <td><input type="button" value="9" onclick="show('9')"></td>
+                <td><input type="button" value="+" onclick="show('+')"></td>
+
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="show('4')"></td>
+                <td><input type="button" value="5" onclick="show('5')"></td>
+                <td><input type="button" value="6" onclick="show('6')"></td>
+                <td><input type="button" value="-" onclick="show('-')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="show('1')"></td>
+                <td><input type="button" value="2" onclick="show('2')"></td>
+                <td><input type="button" value="3" onclick="show('3')"></td>
+                <td><input type="button" value=":" onclick="show(':')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="0" onclick="show('0')"></td>
+                <td><input type="button" value="%" onclick="show('%')"></td>
+                <td><input type="button" value="." onclick="show('.')"></td>
+                <td><input type="button" value="/" onclick="show('/')"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" value="=" onclick="solve()"</td>
+                <td colspan="2"><input type="button" value="C" onclick="clsr()" </td>
+            </tr>
+        </table>
+    </body>
+</html>
